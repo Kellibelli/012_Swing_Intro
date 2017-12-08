@@ -29,10 +29,10 @@ public class FirstWindow extends JFrame {
 		JPanel p2 = new JPanel();
 		p2.setBackground(Color.RED);
 		
-		JPanel p3 = new JPanel (new GridBagLayout() );
+		JPanel p3 = new JPanel (new GridBagLayout());
 		p3.setBackground(Color.YELLOW);
 		
-		JPanel p4 = new JPanel();
+		JPanel p4 = new JPanel(new GridBagLayout());
 		p4.setBackground(Color.GREEN);
 		
 		JPanel p5 = new JPanel(new GridBagLayout());
@@ -52,6 +52,14 @@ public class FirstWindow extends JFrame {
 		JButton b4 = new JButton("Button 4");
 	
 		JButton b5 = new JButton("Button 5");
+		
+		JButton b6 = new JButton("Button 6");
+		
+		JButton b7 = new JButton("Button 7");
+		
+		JButton b8 = new JButton("Button 8");
+		
+		JButton b9 = new JButton("Button 9");
 	
 		
 		JCheckBox cb1 = new JCheckBox("Do you LOVE bacon?");
@@ -65,6 +73,11 @@ public class FirstWindow extends JFrame {
 		
 		JCheckBox cb4 = new JCheckBox("Wow another Checkbox");
 		
+		JCheckBox cb5 = new JCheckBox("Checkbox!");
+		cb5.setBackground(Color.RED);
+		
+		JCheckBox cb6 = new JCheckBox("Pie?");
+		
 		
 		JLabel myLabel = new JLabel("Fancy label!");
 		JTextArea myTextArea = new JTextArea("Fancy TextArea!");
@@ -72,6 +85,8 @@ public class FirstWindow extends JFrame {
 		JRadioButton rb1 = new JRadioButton("Pie");
 		JTextField myTextField2 = new JTextField("Checkbox's are cool");
 		
+		JTextArea myTextArea2 = new JTextArea("Pie is cool");
+		JTextField myTextField3 = new JTextField("Like SUPER cool");
 		
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.insets = new Insets(15, 15, 15, 15);
@@ -96,11 +111,44 @@ public class FirstWindow extends JFrame {
 		gbc.gridx = 2;
 		gbc.gridy = 0;
 		p3.add(myTextField, gbc);
+		gbc.gridx = 0;
+		gbc.gridy = 1;
+		p3.add(b4, gbc);
+		gbc.gridx = 0;
+		gbc.gridy = 2;
+		p3.add(b5, gbc);
+		gbc.gridx = 1;
+		gbc.gridy = 1;
+		p3.add(b6, gbc);
+		gbc.gridx = 1;
+		gbc.gridy = 2;
+		p3.add(b7, gbc);
+		gbc.gridx = 2;
+		gbc.gridy = 1;
+		p3.add(cb5, gbc);
+		gbc.gridx = 2;
+		gbc.gridy = 2;
+		p3.add(b8, gbc);
 		
-		p5.add(cb3);
-		gbc.gridx = 3;
+		gbc.gridx = 1;
 		gbc.gridy = 0;
-		p5.add(b3, gbc);
+		p4.add(b3, gbc);
+		gbc.gridx = 0;
+		gbc.gridy = 1;
+		p4.add(myTextArea2, gbc);
+		gbc.gridx = 0;
+		gbc.gridy = 2;
+		p4.add(myTextField3, gbc);
+		gbc.gridx = 1;
+		gbc.gridy = 1;
+		p4.add(b9, gbc);
+		gbc.gridx = 1;
+		gbc.gridy = 2;
+		p4.add(cb6, gbc);
+		
+		gbc.gridx = 0;
+		gbc.gridy = 0;
+		p5.add(cb3, gbc);
 		gbc.gridx = 0;
 		gbc.gridy = 2;
 		p5.add(cb4, gbc);
@@ -108,12 +156,8 @@ public class FirstWindow extends JFrame {
 		gbc.gridy = 1;
 		p5.add(myTextField2, gbc);
 		
-		gbc.gridx = 0;
-		gbc.gridy = 3;
-		p3.add(b4, gbc);
-		gbc.gridx = 0;
-		gbc.gridy = -3;
-		p3.add(b5, gbc);
+		
+		
 		
 		
 		add(p1, BorderLayout.NORTH);
